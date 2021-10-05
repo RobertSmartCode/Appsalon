@@ -91,7 +91,10 @@ function cambiarSeccion() {
 
 async function mostrarServicios() {
     try {
-        const resultado = await fetch('./servicios.json');
+
+        const url = 'http://localhost/appsalon/servicios.php';
+
+        const resultado = await fetch(url);
         const db = await resultado.json();
 
         const { servicios } = db;
